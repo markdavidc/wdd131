@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  background-color: #ebebeb;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 2em;
+}
+  a:link {
+    color: var(--text-light);
+  }
+  a:visited {
+    color: var(--accent-color);
+  }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.topmenu {
+  display: none; 
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  align-items: center;
+}
+
+section {
+    display: grid;
+    justify-items: center;
+    padding: 5px;
+}
+
+figure {
+    margin: 10px;
+    width: 250px; 
+    height: 250px;
+    overflow: hidden;
+    padding: 6px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black; 
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  button {
+      display: none;
+  }
+
+  .topmenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} 
+
+.topmenu.show {
+    display: block;
+}
