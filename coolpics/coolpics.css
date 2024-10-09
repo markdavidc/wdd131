@@ -1,90 +1,124 @@
+/* wdd131/coolpics/coolpics.css - Style sheet for Unit 2's Cool Pics */
+
 @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
+/* Custom properties */
 :root {
     --primary-color: #52489c;
     --secondary-color: #59c3c3;
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica, sans-serif;
-    --secondary-font: 'Mooli', sans-serif;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
 }
 
+/* Global styles */
 body {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  font-family: var(--primary-font);
-  font-size: 1.2em;
-  background-color: #ebebeb;
-}
-
-header {
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: var(--text-light);
+    font-family: var(--primary-font);
+    font-size: 1.2em;
     text-align: center;
 }
-
-footer {
-    padding: 20px;
+header, footer {
     background-color: var(--primary-color);
     color: var(--text-light);
-    text-align: center;
+    padding: 1em 0;
 }
-
 h1, h2 {
-  text-align: center;
-  font-family: var(--secondary-font);
-  font-size: 2em;
+    font-family: var(--secondary-font);
 }
-  a:link {
+
+/* HTML selectors */
+h1 {
+    margin-block-start: 0;
+    font-weight: normal;
+}
+button {
+    background-color: inherit;
+    color: inherit;
+    font: inherit;
+    border: none;
+}
+a {
+    display: block;
+    margin: 0.25em auto;
+    font-size: medium;
+}
+a:link {
     color: var(--text-light);
-  }
-  a:visited {
+}
+a:visited {
     color: var(--accent-color);
-  }
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
 }
 
-img {
-  max-width: 100%;
-  height: 250px;
-  width: 250px;
-  object-fit: cover;
+/* Class selectors */
+.hide {
+    display: none;
 }
 
-.topmenu {
-  display: none; 
-  flex-direction: column;
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  align-items: center;
+/* Gallery layout */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1em;
 }
 
-section {
+.square {
+    position: relative;
+    margin: 0 auto;
+    max-width: 250px;
+}
+figure {
+    position: relative;
+    margin: 0 ;
+    width: 100%;
+    padding-bottom: 100%;
+}
+img.thumbnail {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px;
+}
+
+/* Viewer layout */
+.viewer {
+    position: fixed;
+    top:0; left:0; bottom:0; right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    z-index: 1;
+}
+.title-bar {
+    margin: 0 auto;
+    min-width: min(100%, 800px);
+    max-width: min(100%, 800px);
+    justify-items: right;
     display: grid;
 }
-
-figure {
-    margin: 10px;
-    width: 250px; 
-    height: 250px;
-    overflow: hidden;
-    padding: 6px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px black; 
+.span-container {
+    position: relative;
+}
+#close-span {
+    position: absolute;
+    bottom: 10px; right: 10px;
+    color: #fff;
+}
+img.modal {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    max-width: min(100%, 800px);
 }
 
+/* Media queries */
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
@@ -103,13 +137,8 @@ figure {
     width: 100%;
   }
 }
-
-@media screen and (min-width: 1000px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-} 
-
-.topmenu.show {
-    display: block;
-}
+  @media screen and (min-width: 1000px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  } 
