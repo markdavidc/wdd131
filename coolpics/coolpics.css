@@ -72,8 +72,6 @@ img {
 
 section {
     display: grid;
-    justify-items: center;
-    padding: 5px;
 }
 
 figure {
