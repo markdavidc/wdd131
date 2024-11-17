@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+:root {
+    --primary-color: #ffffff; 
+    --text-color: #000000; 
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Amatic SC';
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background: #ffffff; 
+    color: var(--text-color); 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    background: var(--primary-color);
+    padding: 1rem;
+    color: #ffffff; /* White text in header */
+}
+
+header img {
+    height: 100px;
+    margin-right: 1rem;
+    padding-bottom: 50px;
+}
+
+header h1 {
+    font-family: var(--secondary-font);
+    color: var(--text-color); /* Ensure header text is black */
+    font-size: 4rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--primary-color); /* Ensure main content background is white */
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+form input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    color: var(--text-color); /* Ensure input text is black */
+}
+
+form button {
+    background: var(--primary-color);
+    border: 1px solid var(--text-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button img {
+    width: 24px;
+    height: 24px;
+}
+
+#recipe-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 150px;
+}
+
+.recipe-card {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row; 
+    padding: 20px;
+}
+
+.recipe-card img {
+    width: 50%; /* Adjust as necessary */
+    height: auto;
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.recipe-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%; 
+    color: var(--text-color); 
+}
+
+.recipe-info .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-info .tags span {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.recipe-info h2 {
+    margin: 0.5rem 0;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+}
+
+
+.recipe-info p {
+    margin: 0.5rem 0;
+    color: var(--text-color); /* Ensure description text is black */
+}
+
+footer {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-left: 2rem; 
+    padding-right: 2rem; 
+    box-sizing: border-box; 
+}
+
+footer p {
+    font-size: 0.6em;
+    margin: 0;
+}
+
+.social a img {
+    width: 36px;
+    height: 36px;
+}
+
+@media (min-width: 600px) {
+
+    .recipe-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 960px) {
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-card {
+        flex-direction: column; 
+    }
+
+    .recipe-card img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .recipe-info .rating {
+        margin-bottom: 0.5rem;
+        color: gold; 
+        display: flex; 
+        align-items: center;
+    }
+
+    .recipe-info p {
+        display: none; /* Hide description */
+    }
+
+    footer {
+        flex-direction: column; 
+        padding-left: 1rem; 
+        padding-right: 1rem; 
+        align-items: center; 
+    }
+
+    footer .social {
+        margin: 1rem 0; /* Add margin for space above and below the social media icons */
+    }
+}
