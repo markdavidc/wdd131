@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skiing Adventures - Explore the best ski resorts and tips for an amazing experience on the slopes.">
+    <link rel="stylesheet" href="person.css">
+    <script src="person.js" defer></script>
+    <title>Skiing Adventures</title>
+</head>
+<body>
+    <header>
+        <img src="logo.webp" alt="Skiing Adventures Logo" class="logo">
+        <div class="header-text">
+            <h1>Skiing Adventures</h1>
+            <p>Find everything you need to plan your next ski trip—from top resorts to must-know tips for maximizing your time on the slopes.</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="personchild.html">Skiing Tips</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+
+<section>
+    <h3>Snowfall Calculator</h3>
+    <form id="snowfall-calculator">
+      <label for="temperature">Current Temperature (°C):</label>
+      <input type="number" id="temperature" required />
+    
+      <label for="humidity">Humidity (%):</label>
+      <input type="number" id="humidity" required />
+    
+      <label for="altitude">Altitude (meters):</label>
+      <input type="number" id="altitude" required />
+    
+      <button type="button" onclick="calculateSnowfall()">Estimate Snowfall</button>
+    </form>
+    <p id="snowfall-result">Estimated Snowfall: -- cm</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Skiing Adventures.</p>
+    </footer>
+
+    <!-- Confirmation Message (initially hidden) -->
+    <div id="confirmationMessage">
+        Your message has been sent successfully!
+    </div>
+
+</body>
+</html>

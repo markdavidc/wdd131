@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skiing Adventures - Explore the best ski resorts and tips for an amazing experience on the slopes.">
+    <link rel="stylesheet" href="person.css">
+    <script src="person.js" defer></script>
+    <title>Skiing Adventures</title>
+</head>
+<body>
+    <header>
+        <img src="logo.webp" alt="Skiing Adventures Logo" class="logo">
+        <div class="header-text">
+            <h1>Skiing Adventures</h1>
+            <p>Your guide to the best ski resorts, tips, and adventures in the mountains!</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="personchild.html">Skiing Tips</a> 
+        <a href="snowfall.html">snowfall-calculator</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Skiing Adventures</h2>
+        <p class="about-text">
+            Skiing Adventures is your ultimate resource for all things skiing! Whether you're planning your first trip or you're a seasoned skier looking for new slopes to conquer, we offer expert advice on ski resorts, gear, and everything you need for a perfect snow-covered escape.
+        </p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="skiing1.jpg" alt="Skiing in the mountains">
+            <img src="skiing2.jpg" alt="Snowboarder in action">
+            <img src="skiing3.jpg" alt="Ski resort view">
+            <img src="skiing4.jpg" alt="Skiers on a trail">
+        </div>
+    </section>
+    <section id="contact">
+    
+        <h2>Contact Us</h2>
+        <p class="about-text">Got any questions? We'd love to hear from you! Reach out below:</p>
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Skiing Adventures.</p>
+    </footer>
+
+    <!-- Confirmation Message (initially hidden) -->
+    <div id="confirmationMessage">
+        Your message has been sent successfully!
+    </div>
+
+</body>
+</html>
