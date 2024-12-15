@@ -73,17 +73,19 @@ section h2 {
     margin: 0 auto;
 }
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap; /* This allows wrapping when screen space is limited */
+    justify-content: space-around; /* Distribute images evenly */
+    gap: 20px; /* Space between the images */
 }
+
 .gallery img {
-    width: 100%;
+    width: 48%; /* Adjust to allow two images side by side, accounting for the gap */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .tip-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -171,6 +173,9 @@ footer p {
     }
     .tip-list {
         grid-template-columns: 1fr;
+    }
+    .gallery img {
+        width: 65%; /* For smaller screens, images will take up the full width */
     }
 }
 /* Confirmation Message */

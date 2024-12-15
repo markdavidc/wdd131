@@ -151,6 +151,27 @@ footer {
 footer p {
     font-size: 1rem;
 }
+
+/* #search-section {
+    margin: 20px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#tip-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+} */
+
 /* Responsive design */
 @media (max-width: 768px) {
     header h1 {
